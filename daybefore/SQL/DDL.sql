@@ -1,0 +1,124 @@
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+	`user_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`id`	VARCHAR(100)	NOT NULL,
+	`password`	VARCHAR(255)	NOT NULL,
+	`name`	VARCHAR(100)	NOT NULL,
+	`email`	VARCHAR(255)	NOT NULL,
+	`phone`	VARCHAR(20)	NOT NULL,
+	`birth`	VARCHAR(100)	NOT NULL,
+	`address`	VARCHAR(255)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`role`	VARCHAR(100)	NOT NULL
+);
+
+DROP TABLE IF EXISTS `Dday`;
+
+CREATE TABLE `Dday` (
+	`day_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`user_id`	BIGINT(20)	NOT NULL,
+	`anniversary_id`	BIGINT(20)	NOT NULL,
+	`relationship_id`	BIGINT(20)	NOT NULL,
+	`calculation_id`	BIGINT(20)	NOT NULL,
+	`date`	DATE	NOT NULL,
+	`title`	VARCHAR(255)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`display_main`	INT	NOT NULL	DEFAULT 0,
+	`notification_enabled`	INT	NOT NULL	DEFAULT 0
+);
+
+DROP TABLE IF EXISTS `product`;
+
+CREATE TABLE `product` (
+	`product_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`p_category_id`	BIGINT(20)	NOT NULL,
+	`name`	VARCHAR(255)	NOT NULL,
+	`description`	TEXT	NOT NULL,
+	`price`	INT	NOT NULL,
+	`image`	VARCHAR(255)	NOT NULL,
+	`platform_url`	VARCHAR(255)	NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS `product_category`;
+
+CREATE TABLE `product_category` (
+	`p_category_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name`	VARCHAR(255)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS `anniversary_type`;
+
+CREATE TABLE `anniversary_type` (
+	`anniversary_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name`	VARCHAR(255)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS `relationship_type`;
+
+CREATE TABLE `relationship_type` (
+	`relationship_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name`	VARCHAR(255)	NOT NULL,
+	`target_age`	INT	NULL,
+	`target_gender`	VARCHAR(10)	NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS `CopyOfrelationship_type`;
+
+CREATE TABLE `CopyOfrelationship_type` (
+	`calculation_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name`	VARCHAR(255)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`description`	TEXT	NOT NULL
+);
+
+DROP TABLE IF EXISTS `notification`;
+
+CREATE TABLE `notification` (
+	`notification_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`recommendation_id`	BIGINT(20)	NOT NULL,
+	`user_id`	BIGINT(20)	NOT NULL,
+	`type`	VARCHAR(50)	NOT NULL,
+	`message`	TEXT	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`enabled`	INT	NOT NULL	DEFAULT 0
+);
+
+DROP TABLE IF EXISTS `persistent_logins`;
+
+CREATE TABLE `persistent_logins` (
+	`username`	VARCHAR(255)	NOT NULL PRIMARY KEY,
+	`series`	VARCHAR(255)	NOT NULL,
+	`token`	VARCHAR(255)	NOT NULL,
+	`last_used`	VARCHAR(255)	NOT NULL
+);
+
+DROP TABLE IF EXISTS `file`;
+
+CREATE TABLE `file` (
+	`file_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`day_id`	BIGINT(20)	NOT NULL,
+	`type`	VARCHAR(100)	NOT NULL,
+	`name`	VARCHAR(100)	NOT NULL,
+	`path`	VARCHAR(100)	NOT NULL,
+	`size`	INT	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS `product_recommendation`;
+
+CREATE TABLE `product_recommendation` (
+	`recommendation_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`product_id`	BIGINT(20)	NOT NULL,
+	`day_id`	BIGINT(20)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	`enabled`	INT	NOT NULL	DEFAULT 0
+);
+
