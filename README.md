@@ -1,19 +1,25 @@
 # DayBefore
 사이드 프로젝트 - 디데이숍
 
-# 프로젝트 작업 순서
+## 설계 순서
+1. 요구사항 / 기능 정의
+2. 테이블 정의
+3. 화면 설계 - 피그마
 
-1. 테이블 정의 및 생성
-2. DB 연결
-3. application.properties 정의
+## 개발 순서
+- 백엔드 초안
+      ⬇️
+- 프론트엔드 초안
+      ⬇️
+- 백엔드 다듬기
+      ⬇️
+- 프론트엔드 화면 다듬기
 
-## 초안 
-
-4. domain 작성
-5. Mapper.xml 작성
-6. Mapper.java 작성
-7. Service, ServiceImpl.java 작성
-8. Controller.java 작성
-9. view 파일 작성
-
-## 수정 및 디벨롭
+1. 테이블 생성
+2. application.properties 설정
+3. domain 파일 작성
+4. Mapper.xml 파일 작성
+5. Mapper.java 파일 작성
+6. Service / ServiceImpl.java 파일 작성
+7. Controller.java 파일 작성
+8. view 파일 작성
