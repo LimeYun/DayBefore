@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hong.daybefore.mapper.FileMapper">
+
+    <!-- 목록 -->
+    <select id="list" resultType="Files">
+        SELECT *
+        FROM files
+    </select>
+
+    <!-- 조회 -->
+    <select id="select" resultType="Files">
+        SELECT *
+        FROM files
+        WHERE file_id = #{fileId}
+    </select>
+
+    <!-- 등록(디데이) -->
+    <insert id="insertForDday">
+        INSERT INTO files (day_id, type, name, path, size)
+        VALUES (#{dayId}, #{type}, #{name}, #{path}, #{size})
+    </insert>
+
+    <!-- 등록(상품) -->
+    <insert id="insertForProduct">
+        INSERT INTO files (product_id, type, name, path, size)
+        VALUES (#{productId}, #{type}, #{name}, #{path}, #{size})
+    </insert>
+
+    <!-- 수정(디데이) -->
+    <update id="updateForDday">
+        UPDATE files
+            SET day_id = #{dayId},
+                type = #{type},
+                name = #{name},
+                path = #{path},
+                size = #{size}
+        WHERE file_id = #{fileId}
+    </update>
+
+    <!-- 수정(상품) -->
+    <update id="updateForProduct">
+        UPDATE files
+            SET product_id = #{productId},
+                type = #{type},
+                name = #{name},
+                path = #{path},
+                size = #{size}
+        WHERE file_id = #{fileId}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM files
+        WHERE file_id = #{fileId}
+    </delete>
+
+</mapper>

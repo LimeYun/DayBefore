@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hong.daybefore.mapper.RelationshipMapper">
+
+    <!-- 목록 -->
+    <select id="list" resultType="Relationship">
+        SELECT *
+        FROM relationship
+    </select>
+
+    <!-- 조회 -->
+    <select id="select" resultType="Relationship">
+        SELECT *
+        FROM relationship
+        WHERE relationship_id = #{relationshipId}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="insert">
+        INSERT INTO relationship (name, target_age, target_gender)
+        VALUES (#{name}, #{targetAge}, #{targetGender})
+    </insert>
+
+    <!-- 수정 -->
+    <update id="update">
+        UPDATE relationship
+            SET name = #{name},
+                target_age = #{targetAge},
+                target_gender = #{targetGender}
+        WHERE relationship_id = #{relationshipId}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM relationship
+        WHERE relationship_id = #{relationshipId}
+    </delete>
+
+</mapper>

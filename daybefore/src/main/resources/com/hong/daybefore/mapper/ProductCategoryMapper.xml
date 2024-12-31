@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hong.daybefore.mapper.ProductCategoryMapper">
+
+    <!-- 목록 -->
+    <select id="list" resultType="ProductCategory">
+        SELECT *
+        FROM product_category
+    </select>
+
+    <!-- 조회 -->
+    <select id="select" resultType="ProductCategory">
+        SELECT *
+        FROM product_category
+        WHERE category_id = #{categoryId}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="insert">
+        INSERT INTO product_category (name, parent_id)
+        VALUES (#{name}, #{parentId})
+    </insert>
+
+    <!-- 수정 -->
+    <update id="update">
+        UPDATE product_category
+            SET name = #{name},
+                parent_id = #{parentId}
+        WHERE category_id = #{categoryId}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM product_category
+        WHERE category_id = #{categoryId}
+    </delete>
+
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hong.daybefore.mapper.TagMapper">
+
+    <!-- 목록 -->
+    <select id="list" resultType="Tag">
+        SELECT *
+        FROM tag
+    </select>
+
+    <!-- 조회 -->
+    <select id="select" resultType="Tag">
+        SELECT *
+        FROM tag
+        WHERE tag_id = #{tagId}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="insert">
+        INSERT INTO tag (anniversary_id, relationship_id)
+        VALUES (#{anniversaryId}, #{relationshipId})
+    </insert>
+
+    <!-- 수정 -->
+    <update id="update">
+        UPDATE tag
+            SET anniversary_id = #{anniversaryId},
+                relationship_id = #{relationshipId}
+        WHERE tag_id = #{tagId}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM tag
+        WHERE tag_id = #{tagId}
+    </delete>
+
+</mapper>
+

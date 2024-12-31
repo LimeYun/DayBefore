@@ -11,7 +11,7 @@ CREATE TABLE `users` (
 	`address`	VARCHAR(255)	NULL,
 	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
 	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
-	`role`	VARCHAR(100)	NOT NULL
+	`role`	VARCHAR(100)	NOT NULL DEFAULT 'ROLE_USER'
 );
 
 DROP TABLE IF EXISTS `Dday`;
@@ -51,18 +51,18 @@ CREATE TABLE `product_category` (
 	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
 );
 
-DROP TABLE IF EXISTS `anniversary_type`;
+DROP TABLE IF EXISTS `anniversary`;
 
-CREATE TABLE `anniversary_type` (
+CREATE TABLE `anniversary` (
 	`anniversary_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`calculation_id`	BIGINT(20)	NOT NULL,
 	`name`	VARCHAR(255)	NOT NULL,
 	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
 );
 
-DROP TABLE IF EXISTS `relationship_type`;
+DROP TABLE IF EXISTS `relationship`;
 
-CREATE TABLE `relationship_type` (
+CREATE TABLE `relationship` (
 	`relationship_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`name`	VARCHAR(255)	NOT NULL,
 	`target_age`	INT	NULL,
@@ -70,13 +70,12 @@ CREATE TABLE `relationship_type` (
 	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
 );
 
-DROP TABLE IF EXISTS `calculation_type`;
+DROP TABLE IF EXISTS `calculation`;
 
-CREATE TABLE `calculation_type` (
+CREATE TABLE `calculation` (
 	`calculation_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`name`	VARCHAR(255)	NOT NULL,
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
-	`description`	TEXT	NOT NULL
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
 );
 
 DROP TABLE IF EXISTS `notification`;
@@ -100,12 +99,12 @@ CREATE TABLE `persistent_logins` (
 	`last_used`	VARCHAR(255)	NOT NULL
 );
 
-DROP TABLE IF EXISTS `file`;
+DROP TABLE IF EXISTS `files`;
 
-CREATE TABLE `file` (
+CREATE TABLE `files` (
 	`file_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	`day_id`	BIGINT(20)	NOT NULL,
-	`product_id`	BIGINT(20)	NOT NULL,
+	`day_id`	BIGINT(20)	NULL,
+	`product_id`	BIGINT(20)	NULL,
 	`type`	VARCHAR(100)	NOT NULL,
 	`name`	VARCHAR(100)	NOT NULL,
 	`path`	VARCHAR(100)	NOT NULL,
@@ -126,7 +125,8 @@ CREATE TABLE `tag` (
 DROP TABLE IF EXISTS `product_tag`;
 
 CREATE TABLE `product_tag` (
-	`product_id`	BIGINT(20)	NOT NULL PRIMARY KEY,
-	`tag_id`	BIGINT(20)	NOT NULL PRIMARY KEY,
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
+	`product_id`	BIGINT(20)	NOT NULL,
+	`tag_id`	BIGINT(20)	NOT NULL,
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP,
+	 PRIMARY KEY (`product_id`, `tag_id`)
 );

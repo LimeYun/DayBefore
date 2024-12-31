@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hong.daybefore.mapper.NotificationMapper">
+
+    <!-- 목록 -->
+    <select id="list" resultType="Notification">
+        SELECT *
+        FROM notification
+    </select>
+
+    <!-- 조회 -->
+    <select id="select" resultType="Notification">
+        SELECT *
+        FROM notification
+        WHERE notification_id = #{notificationId}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="insert">
+        INSERT INTO notification (product_id, day_id, title, message)
+        VALUES (#{productId}, #{dayId}, #{title}, #{message})
+    </insert>
+
+    <!-- 수정 -->
+    <update id="update">
+        UPDATE notification
+            SET product_id = #{productId},
+                day_id = #{dayId},
+                title = #{title},
+                message = #{message}
+        WHERE notification_id = #{notificationId}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM notification
+        WHERE notification_id = #{notificationId}
+    </delete>
+
+</mapper>

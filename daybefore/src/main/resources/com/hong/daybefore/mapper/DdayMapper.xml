@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hong.daybefore.mapper.DdayMapper">
+
+    <!-- 목록 -->
+    <select id="list" resultType="Dday">
+        SELECT *
+        FROM Dday
+    </select>
+
+    <!-- 조회 -->
+    <select id="select" resultType="Dday">
+        SELECT *
+        FROM Dday
+        WHERE day_id = #{dayId}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="insert">
+        INSERT INTO Dday (user_id, tag_id, date, title, display_main, notification_enabled)
+        VALUES (#{userId}, #{tagId}, #{date}, #{title}, #{display_main}, #{notification_enabled})
+    </insert>
+
+    <!-- 수정 -->
+    <update id="update">
+        UPDATE Dday
+            SET tag_id = #{tagId},
+                date = #{date},
+                title = #{title},
+                display_main = #{displayMain},
+                notification_enabled = #{notificationEnabled}
+        WHERE day_id = #{dayId}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="delete">
+        DELETE FROM Dday
+        WHERE day_id = #{dayId}
+    </delete>
+
+</mapper>
