@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DaybeforeApplication<daybefore>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.hong.daybefore.DaybeforeApplication",
+      "projectName": "daybefore",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

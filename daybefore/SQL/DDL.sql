@@ -55,8 +55,8 @@ DROP TABLE IF EXISTS `anniversary`;
 
 CREATE TABLE `anniversary` (
 	`anniversary_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	`calculation_id`	BIGINT(20)	NOT NULL,
 	`name`	VARCHAR(255)	NOT NULL,
+	`calculation` VARCHAR(255) NOT NULL,
 	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -67,14 +67,6 @@ CREATE TABLE `relationship` (
 	`name`	VARCHAR(255)	NOT NULL,
 	`target_age`	INT	NULL,
 	`target_gender`	VARCHAR(10)	NULL,
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
-);
-
-DROP TABLE IF EXISTS `calculation`;
-
-CREATE TABLE `calculation` (
-	`calculation_id`	BIGINT(20)	NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	`name`	VARCHAR(255)	NOT NULL,
 	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP
 );
 

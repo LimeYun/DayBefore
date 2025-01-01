@@ -18,9 +18,18 @@
 1. 테이블 생성
 2. application.properties 설정
 3. domain 파일 작성
-
 4. Mapper.xml 파일 작성
 5. Mapper.java 파일 작성
 6. Service / ServiceImpl.java 파일 작성
+
 7. Controller.java 파일 작성
 8. view 파일 작성
+
+## URL 경로
+### 기본
+- /
+- /join
+### USER
+- /Dday/list
+- /Dday
+### ADMIN

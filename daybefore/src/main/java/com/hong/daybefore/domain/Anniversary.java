@@ -8,8 +8,8 @@ import lombok.Data;
 public class Anniversary {
     
     private Long anniversaryId;
-    private Long calculationId;
     private String name;
+    private String calculation;
     private Date createdAt;
     
 }

@@ -20,15 +20,15 @@
 
     <!-- 등록 -->
     <insert id="insert">
-        INSERT INTO anniversary (calculation_id, name)
-        VALUES (#{calculationId}, #{name})
+        INSERT INTO anniversary (name, calculation)
+        VALUES (#{name}, #{calculation})
     </insert>
 
     <!-- 수정 -->
     <update id="update">
         UPDATE anniversary
-            SET calculation_id = #{calculationId},
-                name = #{name}
+            SET name = #{name},
+                calculation = #{calculation}
         WHERE anniversary_id = #{anniversaryId}
     </update>
 

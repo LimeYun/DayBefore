@@ -1,0 +1,41 @@
+<th:block th:fragment="header">
+
+    <header>
+        <div class="logo">
+            <a href="/">DAY BEFORE</a>
+        </div>
+        <div class="goto">
+            <div class="info">
+                <a href="/">내 정보</a>
+            </div>
+            <div class="cart">
+                <a href="/">장바구니</a>
+            </div>
+            <div class="setting">
+                <a href="/">설정</a>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        header {
+            width: 100vw;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a {
+            color: white;
+        }
+        .logo {
+            width: 250px;
+            height: 30px;
+        }
+        .logo a {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+
+</th:block>
