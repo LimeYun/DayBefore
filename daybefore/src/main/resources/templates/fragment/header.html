@@ -18,27 +18,65 @@
     </header>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        input {
+            padding: 0 10px;
+        }
+        body {
+            margin-top: 100px;
+        }
         header {
-            width: 100vw;
+            width: 100%;
             height: 100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            top: 0%;
+            left: 0%;
         }
+        header:hover {
+            background-color: black;
+            transition: background-color 0.3s ease;
+        }
+        header:hover a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
         header a {
+            color: black;
+        }
+        
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
             text-decoration: none;
             color: black;
         }
+
         .logo {
             width: 250px;
             height: 30px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .logo a {
             font-size: 25px;
             font-weight: bold;
             text-align: center;
         }
+
         .goto {
             display: flex;
             align-items: center;
@@ -47,10 +85,12 @@
             height: 30px;
             text-align: center;
         }
+
         .goto div {
             width: 100px;
             height: 30px;
         }
+        
     </style>
 
 </th:block>

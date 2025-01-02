@@ -13,7 +13,6 @@ public class HomeController {
   
     /**
      * 메인 화면
-     * @param param
      * @return
      */
     @GetMapping("")

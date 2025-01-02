@@ -20,14 +20,6 @@ public class AnniversaryController {
     @Autowired
     private AnniversaryService anniversaryService;
 
-    @GetMapping("/user/Dday/list")
-    public String list(Model model) {
-
-        List<Anniversary> anniversaryList =  anniversaryService.list();
-        model.addAttribute("anniversaryList", anniversaryList);
-
-        return "/user/Dday/list";
-    }
     
     
 }
