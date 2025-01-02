@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import lombok.extern.slf4j.Slf4j;
 
 
+
 @Slf4j
 @Controller
 public class HomeController {
@@ -20,6 +21,16 @@ public class HomeController {
 
         
         return "/index";
+    }
+
+    /**
+     * 회원가입 화면
+     * @return
+     */
+    @GetMapping("")
+    public String join() {
+
+        return "/join";
     }
     
 
