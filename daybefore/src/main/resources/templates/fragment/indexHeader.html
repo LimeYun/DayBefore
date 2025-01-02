@@ -11,9 +11,9 @@
             <div class="cart">
                 <a href="/">장바구니</a>
             </div>
-            <div class="setting">
-                <a href="/">설정</a>
-            </div>
+        </div>
+        <div class="setting">
+            <a href="/user/Dday">디데이</a>
         </div>
     </header>
 
@@ -24,22 +24,25 @@
             box-sizing: border-box;
             list-style: none;
         }
-         header {
-            width: 100vw;
+
+        header {
+            width: 100%;
             height: 100px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            position: fixed;
         }
 
         header a {
             color: white;
-        }
-        
-        a {
             display: flex;
             justify-content: center;
             align-items: center;
+            font-weight: bold;
+        }
+
+        a {
             width: 100%;
             height: 100%;
             text-decoration: none;
@@ -60,10 +63,12 @@
         }
 
         .goto {
+            position: absolute;
+            right: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 300px;
+            width: 250px;
             height: 30px;
             text-align: center;
         }
@@ -71,6 +76,15 @@
         .goto div {
             width: 100px;
             height: 30px;
+        }
+        .setting {
+            width: 125px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
         }
     </style>
 
