@@ -27,7 +27,7 @@ public class HomeController {
      * 회원가입 화면
      * @return
      */
-    @GetMapping("")
+    @GetMapping("/join")
     public String join() {
 
         return "/join";
