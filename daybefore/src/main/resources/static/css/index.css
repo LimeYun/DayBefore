@@ -1,0 +1,50 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F08F49;
+}
+.tool {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.comment {
+    font-size: 30px;
+    color: white;
+}
+.auth {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.auth button {
+    width: 100px;
+    height: 40px;
+    background: none;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.auth a {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
