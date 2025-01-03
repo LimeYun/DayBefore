@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>디데이</title>
     <link rel="stylesheet" href="/css/Dday/list.css">
+    <link rel="stylesheet" href="/css/Dday/DdaySidebar.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 </head>
 
 <th:block th:replace="~{fragment/header::header}"></th:block>
@@ -23,9 +25,259 @@
     <div class="container">
         <th:block th:replace="~{fragment/DdaySidebar::DdaySidebar}"></th:block>
         <div class="content">
-            
+            <div class="DdayList-title">
+                <div class="Dday-quantity">
+                    <span>24개의 디데이</span>
+                </div>
+                <div class="Dday-search">
+                    <input type="text" placeholder="디데이명, 날짜로 검색하기">
+                    <button type="submit">검색</button>
+                </div>
+            </div>
+            <div class="Dday-container">
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-card">
+                    <div class="Dday-img">
+                        <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
+                    </div>
+                    <div class="Dday-info">
+                        <div class="Dday-title">
+                            <span>홍성윤</span>
+                        </div>
+                        <div class="Dday-date-type">
+                            <div class="Dday-date">
+                                <span>2000.10.02(월)</span>
+                            </div>
+                            <div class="Dday-type">
+                                <span>생일</span>
+                            </div>
+                        </div>
+                        <div class="Dday-count">
+                            <span>D-30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <th:block th:replace="~{fragment/createDdayModal::createDdayModal}"></th:block>
+    <th:block th:replace="~{fragment/createDdayOptionModal::createDdayOptionModal}"></th:block>
+
+    <th:block th:replace="~{fragment/footer::footer}"></th:block>
 </body>
+
+<script>
+    
+</script>
 
 </html>

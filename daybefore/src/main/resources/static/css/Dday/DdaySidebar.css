@@ -1,0 +1,65 @@
+
+.sidebar {
+    width: 280px;
+    height: 980px;
+    border-right: 1px solid #D8D8D8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.insert-Dday {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insert-Dday button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #E7ECEF;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+nav {
+    width: 240px;
+    padding-bottom: 30px;
+    display: inline-block;
+}
+.anniversary {
+    border-bottom: 1px solid #D8D8D8;
+}
+nav > ul {
+    padding-left: 40px;
+}
+.all {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+h3 {
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.sub-menu li {
+    width: 100%;
+    height: 35px;
+    padding-left: 20px;
+}
+.sub-menu li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    color: #888888;
+}
+.relationship-menu {
+    margin-top: 30px;
+}

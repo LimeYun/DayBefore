@@ -2,7 +2,7 @@
     <script src="/js/jquery-1.12.3.js"></script>
     <div class="sidebar">
         <div class="insert-Dday">
-            <button type="button">디데이 등록 ➕</button>
+            <button type="button" onclick="showCreateDdayModal()">디데이 등록 ➕</button>
         </div>
         <nav class="anniversary">
             <ul class="anniversay-menu">
@@ -37,4 +37,10 @@
             </ul>
         </nav>
     </div>
+    <script>
+        function showCreateDdayModal() {
+            var modal = document.getElementById("createDdayModal")
+            modal.style.display = "block"
+        }
+    </script>
 </th:block>

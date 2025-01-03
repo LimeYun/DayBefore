@@ -4,7 +4,7 @@
     background-color: #F08F49;
 }
 
-.tool {
+.login-and-join {
     width: 400px;
     height: 120px;
     display: flex;
@@ -88,7 +88,7 @@
     font-size: 22px;
     text-align: center;
 }
-.close {
+.login-modal .close {
     position: absolute;
     right: 0;
     /* font-weight: bold; */

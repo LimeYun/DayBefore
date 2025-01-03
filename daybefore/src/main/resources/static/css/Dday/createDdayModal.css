@@ -1,0 +1,98 @@
+#createDdayModal {
+    position: fixed;
+    width: 600px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    border-radius: 20px;
+    display: none;
+    outline: 1px solid lightgray;
+}
+.top-section {
+    width: 100%;
+    height: 250px;
+}
+#createDdayModal .tool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+}
+#createDdayModal .tool button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+#createDdayModal .upload-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#createDdayModal .upload-img .tool {
+    position: absolute;
+    top: 0;
+}
+#createDdayModal .upload-img-comment {
+    font-size: 14px;
+    color: #8F8F91;
+}
+.bottom-section {
+    width: 100%;
+    height: 550px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottom-section .create-Dday-info {
+    width: 520px;
+    height: 45px;
+    margin: 0 40px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+.create-Dday-info input {
+    width: 400px;
+}
+.create-Dday-info input,
+.create-Dday-info button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.create-Dday-info button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.create-Dday-info button img {
+    width: 14px;
+    height: 14px;
+}
+.create-Dday-info .select-anniversary {
+    display: flex;
+    align-items: center;
+}
+.calendar-section {
+    width: 520px;
+    height: auto;
+}
+/* #calendar {
+    width: 100%;
+    height: 100%;
+} */

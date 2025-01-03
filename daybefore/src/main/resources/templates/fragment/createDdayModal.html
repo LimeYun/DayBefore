@@ -1,0 +1,39 @@
+<th:block th:fragment="createDdayModal">
+    <link rel="stylesheet" href="/css/Dday/createDdayModal.css">
+    <script src="/js/Dday/createDdayModal.js"></script>
+
+    <div id="createDdayModal">
+        <div class="top-section">
+            <div class="upload-img">
+                <div class="tool">
+                    <div class="close">
+                        <button type="button" class="close" onclick="closeCreateDdayModal()">X</button>
+                    </div>
+                    <div class="save">
+                        <button type="button" class="save">저장</button>
+                    </div>
+                </div>
+                <div class="upload-img-comment">
+                    <span>원하는 이미지 등록하기</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="create-Dday-info">
+                <div class="create-Dday-title">
+                    <input type="text" placeholder="누구의 생일인가요?">
+                </div>
+                <div class="select-anniversary">
+                    <button type="button">
+                        <img src="/img/angledown.png" alt="아래화살표">
+                        <span>생일</span>
+                    </button>
+                </div>
+            </div>
+            <div class="calendar-section">
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+</th:block>
