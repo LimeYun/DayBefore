@@ -1,0 +1,108 @@
+#DdayDetailModal {
+    position: fixed;
+    width: 600px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #DDE2E5;
+    border-radius: 20px;
+    outline: 1px solid #DDE2E5;
+}
+#DdayDetailModal .top-section {
+    width: 100%;
+    height: 500px;
+}
+#DdayDetailModal .img-section {
+    width: 100%;
+    height: 100%;
+}
+#DdayDetailModal .tool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    position: absolute;
+}
+#DdayDetailModal .tool button {
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+#DdayDetailModal .notification-and-update {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#DdayDetailModal .img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+#DdayDetailModal .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+#DdayDetailModal .bottom-section {
+    width: 100%;
+    height: 300px;
+}
+#DdayDetailModal .Dday-info {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+#DdayDetailModal .Dday-title-and-date {
+    display: flex;
+    width: 300px;
+}
+#DdayDetailModal .Dday-title {
+    display: inline-block;
+    justify-content: start;
+    font-weight: bold;
+    font-size: 18px;
+}
+#DdayDetailModal .Dday-date-type {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding: 0 15px;
+    color: #7A7A7C;
+    font-weight: bold;
+}
+#DdayDetailModal .Dday-date-type .Dday-date {
+    display: inline-block;
+    margin-right: 10px;
+}
+#DdayDetailModal .Dday-date-type .Dday-type {
+    display: inline-block;
+    padding-left: 10px;
+    border-left: 2px solid #8F8F91;
+}
+#DdayDetailModal .Dday-info-count {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+}
+#DdayDetailModal .Dday-count-list-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    background-color: white;
+}
+#DdayDetailModal .Dday-count-list {
+    
+}

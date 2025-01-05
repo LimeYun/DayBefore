@@ -5,12 +5,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightgray;
+    background-color: #DDE2E5;
     border-radius: 20px;
     display: none;
-    outline: 1px solid lightgray;
+    outline: 1px solid #DDE2E5;
 }
-.top-section {
+#createDdayModal .top-section {
     width: 100%;
     height: 250px;
 }
@@ -46,7 +46,7 @@
     font-size: 14px;
     color: #8F8F91;
 }
-.bottom-section {
+#createDdayModal .bottom-section {
     width: 100%;
     height: 550px;
     background-color: white;
@@ -55,40 +55,40 @@
     flex-direction: column;
     align-items: center;
 }
-.bottom-section .create-Dday-info {
+#createDdayModal .bottom-section .create-Dday-info {
     width: 520px;
     height: 45px;
     margin: 0 40px 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #DDE2E5;
 }
-.create-Dday-info input {
+#createDdayModal .create-Dday-info input {
     width: 400px;
 }
-.create-Dday-info input,
-.create-Dday-info button {
+#createDdayModal .create-Dday-info input,
+#createDdayModal .create-Dday-info button {
     background: none;
     border: none;
     font-size: 15px;
     font-weight: bold;
 }
-.create-Dday-info button {
+#createDdayModal .create-Dday-info button {
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.create-Dday-info button img {
+#createDdayModal .create-Dday-info button img {
     width: 14px;
     height: 14px;
 }
-.create-Dday-info .select-anniversary {
+#createDdayModal .create-Dday-info .select-anniversary {
     display: flex;
     align-items: center;
 }
-.calendar-section {
+#createDdayModal .calendar-section {
     width: 520px;
     height: auto;
 }

@@ -1,0 +1,82 @@
+<th:block th:fragment="DdayDetailModal">
+    <link rel="stylesheet" href="/css/Dday/DdayDetailModal.css">
+    <script src="/js/Dday/DdayDetailModal.js"></script>
+
+    <div id="DdayDetailModal">
+        <div class="top-section">
+            <div class="img-section">
+                <div class="tool">
+                    <div class="close">
+                        <button type="button" class="close" onclick="closeDdayDetailModal()">X</button>
+                    </div>
+                    <div class="notification-and-update">
+                        <div class="notification">
+                            <button type="button" onclick="onOffNotification()">알림</button>
+                        </div>
+                        <div class="update">
+                            <button type="button" onclick="showUpdateToolbar()">수정</button>
+                        </div>
+                        <!-- <div id="updateToolbar">
+                            <div class="update">
+                                <span>수정</span>
+                            </div>
+                            <div class="delete">
+                                <span>삭제</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="/img/DdayCardSample.jpg" alt="이미지샘플">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="Dday-info">
+                <div class="Dday-title-and-date">
+                    <div class="Dday-title">
+                        <span>홍성윤</span>
+                    </div>
+                    <div class="Dday-date-type">
+                        <div class="Dday-date">
+                            <span>2000.10.02(월)</span>
+                        </div>
+                        <div class="Dday-type">
+                            <span>생일</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dday-info-count">
+                    <span>D-30</span>
+                </div>
+            </div>
+            <div class="Dday-count-list-container">
+                <div class="Dday-count-list">
+                    <div class="Dday-count">
+                        <span>D-100</span>
+                    </div>
+                    <div class="date">
+                        <span>2000.10.02(월)</span>
+                    </div>
+                </div>
+                <div class="Dday-count-list">
+                    <div class="Dday-count">
+                        <span>D-100</span>
+                    </div>
+                    <div class="date">
+                        <span>2000.10.02(월)</span>
+                    </div>
+                </div>
+                <div class="Dday-count-list">
+                    <div class="Dday-count">
+                        <span>D-100</span>
+                    </div>
+                    <div class="date">
+                        <span>2000.10.02(월)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</th:block>

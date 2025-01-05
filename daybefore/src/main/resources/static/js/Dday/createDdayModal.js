@@ -1,6 +1,9 @@
-function closeCreateDdayModal() {
+function backToOptionModal() {
     var modal = document.getElementById("createDdayModal")
     modal.style.display = "none"
+
+    var optionModal = document.getElementById("createDdayOptionModal")
+    optionModal.style.display = "block"
 }
 
 document.addEventListener('DOMContentLoaded', function () {

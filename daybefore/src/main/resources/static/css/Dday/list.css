@@ -68,7 +68,7 @@
     padding-left: 20px;
     align-content: start;
 }
-.Dday-card {
+.Dday-container .Dday-card {
     width: 280px;
     height: 280px;
     display: flex;
@@ -77,26 +77,27 @@
     border-radius: 20px;
     margin: 30px 20px;
     background-color: #E7ECEF;
+    cursor: pointer;
 }
-.Dday-img {
+.Dday-container .Dday-img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;
     height: 200px;
     overflow: hidden;
 }
-.Dday-img img {
+.Dday-container .Dday-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.Dday-info {
+.Dday-container .Dday-info {
     width: 100%;
     height: 80px;
     display: flex;
     flex-direction: column;
 }
-.Dday-title {
+.Dday-container .Dday-title {
     width: 100%;
     height: 30px;
     padding: 0 15px;
@@ -105,7 +106,7 @@
     display: flex;
     align-items: center;
 }
-.Dday-date-type {
+.Dday-container .Dday-date-type {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -114,25 +115,25 @@
     padding: 0 15px;
     color: #8F8F91;
 }
-.Dday-date-type span {
+.Dday-container .Dday-date-type span {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.Dday-date {
+.Dday-container .Dday-date {
     display: flex;
     align-items: center;
     justify-content: start;
     width: 100px;
 }
-.Dday-type {
+.Dday-container .Dday-type {
     display: flex;
     align-items: center;
     width: 35px;
     justify-content: end;
     border-left: 1px solid #D5D5D7;
 }
-.Dday-count {
+.Dday-container .Dday-count {
     width: 100%;
     height: 35px;
     padding: 0 15px;

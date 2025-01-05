@@ -1,0 +1,92 @@
+#createDdayOptionModal {
+    position: fixed;
+    width: 600px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #DDE2E5;
+    border-radius: 20px;
+    display: none;
+    outline: 1px solid #DDE2E5;
+}
+#createDdayOptionModal .tool {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+}
+#createDdayOptionModal .tool button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+#createDdayOptionModal .select-tag-section {
+    width: 100%;
+    height: 730px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#createDdayOptionModal .public-section {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+#createDdayOptionModal .public-title {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#createDdayOptionModal .public-tag-section {
+    padding: 10px 10px;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 15px;
+}
+#createDdayOptionModal .public-tag-section button {
+    width: 90px;
+    height: 35px;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+#createDdayOptionModal .select-complete-button {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; */
+    height: 70px;
+}
+#createDdayOptionModal .select-complete-button button {
+    width: 120px;
+    height: 40px;
+    background-color: #F08F49;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
