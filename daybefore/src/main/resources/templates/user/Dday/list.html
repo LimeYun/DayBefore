@@ -7,8 +7,6 @@
     <title>디데이</title>
     <link rel="stylesheet" href="/css/Dday/list.css">
     <link rel="stylesheet" href="/css/Dday/DdaySidebar.css">
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <script src="/js/Dday/DdayList.js"></script>
 </head>
 
 <th:block th:replace="~{fragment/header::header}"></th:block>
@@ -36,7 +34,7 @@
                 </div>
             </div>
             <div class="Dday-container">
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -57,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <!-- <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지"> -->
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
@@ -79,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -100,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -121,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -142,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -163,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -184,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -205,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -226,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -247,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -268,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -289,7 +287,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -310,7 +308,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -331,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -352,7 +350,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -373,7 +371,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -394,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -415,7 +413,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -436,7 +434,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -457,7 +455,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -478,7 +476,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -499,7 +497,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -520,7 +518,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -541,7 +539,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -562,7 +560,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -583,7 +581,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>
@@ -604,7 +602,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Dday-card" onclick="showDdayDetailModal()">
+                <div class="Dday-card" id="DdayCard" onclick="showDdayDetailModal()">
                     <div class="Dday-img">
                         <img src="/img/DdayCardSample.jpg" alt="카드샘플이미지">
                     </div>

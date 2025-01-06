@@ -8,6 +8,7 @@
     background-color: #DDE2E5;
     border-radius: 20px;
     outline: 1px solid #DDE2E5;
+    display: none;
 }
 #DdayDetailModal .top-section {
     width: 100%;
@@ -26,7 +27,17 @@
     padding: 0 40px;
     position: absolute;
 }
-#DdayDetailModal .tool button {
+#DdayDetailModal .notification-and-update {
+    position: relative;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#DdayDetailModal .close button,
+#DdayDetailModal .notification-button button,
+#DdayDetailModal .update-button button
+ {
     border: none;
     background: none;
     font-weight: bold;
@@ -34,11 +45,49 @@
     color: white;
     cursor: pointer;
 }
-#DdayDetailModal .notification-and-update {
-    width: 100px;
+#DdayDetailModal #updateToolbar {
+    top: 120%;
+    left: -20%;
+    display: none;
+    position: absolute;
+    width: 130px;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
+}
+#DdayDetailModal #updateToolbar .update {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid lightgray;
+}
+#DdayDetailModal #updateToolbar .delete {
+    width: 100%;
+    height: 40px;
+}
+#DdayDetailModal #updateToolbar button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#DdayDetailModal #updateToolbar .update button {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#DdayDetailModal #updateToolbar .delete button {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #FB2626;
+}
+#DdayDetailModal #updateToolbar button span {
+    display: flex;
+    justify-content: start;
 }
 #DdayDetailModal .img {
     width: 100%;
@@ -100,9 +149,41 @@
 #DdayDetailModal .Dday-count-list-container {
     width: 100%;
     height: 250px;
+    padding: 0 40px;
     border-radius: 20px;
     background-color: white;
+    overflow: auto;
 }
 #DdayDetailModal .Dday-count-list {
-    
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+}
+#DdayDetailModal .Dday-count,
+#DdayDetailModal .date {
+    margin-left: 10px;
+    height: 25px;
+}
+#DdayDetailModal .date {
+    color: #7A7A7C;
+}
+
+
+.Dday-count-list-container::-webkit-scrollbar {
+    display: none;
+    width: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.Dday-count-list-container::-webkit-scrollbar-thumb {
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: lightgray;
+}
+.onOffToolbar-active {
+    filter: brightness(60%) !important; 
 }

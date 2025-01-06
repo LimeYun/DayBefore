@@ -10,20 +10,26 @@
                         <button type="button" class="close" onclick="closeDdayDetailModal()">X</button>
                     </div>
                     <div class="notification-and-update">
-                        <div class="notification">
+                        <div class="notification-button">
                             <button type="button" onclick="onOffNotification()">알림</button>
                         </div>
-                        <div class="update">
-                            <button type="button" onclick="showUpdateToolbar()">수정</button>
+                        <div class="update-button">
+                            <button type="button" id="onOffToolbar">수정</button>
                         </div>
-                        <!-- <div id="updateToolbar">
+                        <div id="updateToolbar">
                             <div class="update">
-                                <span>수정</span>
+                                <button type="button" onclick="updateDday()">
+                                    <span>수정</span>
+                                    <span>※</span>
+                                </button>
                             </div>
                             <div class="delete">
-                                <span>삭제</span>
+                                <button type="button" onclick="deleteDday()">
+                                    <span>삭제</span>
+                                    <span>※</span>
+                                </button>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 <div class="img">
@@ -51,6 +57,30 @@
                 </div>
             </div>
             <div class="Dday-count-list-container">
+                <div class="Dday-count-list">
+                    <div class="Dday-count">
+                        <span>D-100</span>
+                    </div>
+                    <div class="date">
+                        <span>2000.10.02(월)</span>
+                    </div>
+                </div>
+                <div class="Dday-count-list">
+                    <div class="Dday-count">
+                        <span>D-100</span>
+                    </div>
+                    <div class="date">
+                        <span>2000.10.02(월)</span>
+                    </div>
+                </div>
+                <div class="Dday-count-list">
+                    <div class="Dday-count">
+                        <span>D-100</span>
+                    </div>
+                    <div class="date">
+                        <span>2000.10.02(월)</span>
+                    </div>
+                </div>
                 <div class="Dday-count-list">
                     <div class="Dday-count">
                         <span>D-100</span>
