@@ -1,43 +1,44 @@
-
-function showDdayDetailModal() {
-    var modal = document.getElementById("DdayDetailModal")
-    modal.style.display = "block"
-}
-
 function onOffNotification() {
     alert("디데이 알림 설정이 변경되었습니다.")
 }
-
-
-
 function deleteDday() {
     confirm("정말로 삭제하시겠습니까?")
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
+    
+    
+    
     const DdayDetailModal = document.getElementById("DdayDetailModal")
-    const DdayCard = document.getElementById("DdayCard")
+    const DdayCard = document.querySelectorAll(".DdayCard")
 
-    const updateToolbar = document.getElementById("updateToolbar")
-    const onOffToolbar = document.getElementById("onOffToolbar")
+    const closeButton = document.getElementById("DdayDetailModalCloseButton")
+    closeButton.addEventListener("click", closeDdayDetailModal)
 
-    let isUpdateToolbarOpen = false
+
+    DdayCard.forEach((target) => target.addEventListener("click", toggleDdayDetailModal))
+
     let isDdayDetailModalOpen = false
-
+    
     function openDdayDetailModal() {
+        console.log("뜨나?");
         isDdayDetailModalOpen = true
         DdayDetailModal.style.display = "block"
     }
     function closeDdayDetailModal() {
-        isUpdateToolbarOpen = false
+        isDdayDetailModalOpen = false
         DdayDetailModal.style.display = "none"
     }
     function toggleDdayDetailModal(event) {
         event.stopPropagation()
         isDdayDetailModalOpen ? closeDdayDetailModal() : openDdayDetailModal()
     }
-    DdayCard.addEventListener('click', toggleDdayDetailModal)
-
+    
+    const updateToolbar = document.getElementById("updateToolbar")
+    const onOffToolbar = document.getElementById("onOffToolbar")
+    
+    let isUpdateToolbarOpen = false
 
     function openUpdateToolbar() {
         isUpdateToolbarOpen = true
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isUpdateToolbarOpen && !updateToolbar.contains(event.target)) {
             closeUpdateToolbar()
         }
-        if (isDdayDetailModalOpen && DdayDetailModal.contains(event.target)) {
+        if (isDdayDetailModalOpen && !DdayDetailModal.contains(event.target)) {
             closeDdayDetailModal()
         }
         

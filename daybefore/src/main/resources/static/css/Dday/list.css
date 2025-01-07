@@ -68,7 +68,7 @@
     padding-left: 20px;
     align-content: start;
 }
-.Dday-container .Dday-card {
+.Dday-container .DdayCard {
     width: 280px;
     height: 280px;
     display: flex;
