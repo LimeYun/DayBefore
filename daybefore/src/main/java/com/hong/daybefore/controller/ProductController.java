@@ -16,4 +16,9 @@ public class ProductController {
         return "/user/product/list";
     }
     
+    @GetMapping("/user/product/product")
+    public String product() {
+        
+        return "/user/product/product";
+    }
 }

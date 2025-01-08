@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>선물하기</title>
+    <title>DAY BEFORE</title>
+    <link rel="stylesheet" href="/css/product/product.css">
 </head>
+
+<th:block th:replace="~{fragment/header::header}"></th:block>
+<th:block th:replace="~{fragment/subHeader::subHeader}"></th:block>
+
 <body>
-    
+    <div class="container">
+        <div class="product-category-info">
+            <span>식품 > 케이크</span>
+        </div>
+        <div class="product-top-section">
+            <div class="product-main-img">
+                <img src="/img/productCardSample.jpg" alt="상품샘플이미지">
+            </div>
+            <div class="product-basic-info">
+                <div class="product-tag-list">
+                    <div class="product-tag">
+                        <span>생일</span>
+                    </div>
+                    <div class="product-tag">
+                        <span>10대</span>
+                    </div>
+                    <div class="product-tag">
+                        <span>남자</span>
+                    </div>
+                </div>
+                <a href="#" class="product-brand-name">
+                    <span>브랜드명</span>
+                </a>
+                <div class="product-name">
+                    <span>“메리 크리스마스” 과자 7종 선물세트 (알
+                        새우칩, 꼬깔곤, 치토스 등)</span>
+                </div>
+                <div class="product-price">
+                    <span class="product-price-number">12,500</span>
+                    <span>원</span>
+                </div>
+                <div class="product-platform">
+                    <img src="/img/coupangIcon.jpg" alt="쿠팡아이콘이미지">
+                    <div class="platform-name">
+                        <span>쿠팡</span>
+                    </div>
+                </div>
+                <div class="product-stock">
+                    <span>수량</span>
+                    <div class="product-stock-count">
+                        <button type="button" class="decrease-count">-</button><input type="text" class="product-quantity"><button type="button" class="increase-count">+</button>
+                    </div>
+                </div>
+                <div class="product-buttons">
+                    <div class="product-buy-button">
+                        <button type="button">바로 구매하기</button>
+                    </div>
+                    <div class="product-cart-button">
+                        <button type="button">장바구니 담기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-bottom-section">
+            <div class="product-detail-title">
+                <span>상품 설명</span>
+            </div>
+            <div class="product-detail-img">
+                <img src="/img/productCardSample.jpg" alt="상품샘플이미지">
+                <img src="/img/productCardSample.jpg" alt="상품샘플이미지">
+                <img src="/img/productCardSample.jpg" alt="상품샘플이미지">
+                <img src="/img/productCardSample.jpg" alt="상품샘플이미지">
+                <img src="/img/productCardSample.jpg" alt="상품샘플이미지">
+            </div>
+        </div>
+    </div>
+
+    <th:block th:replace="~{fragment/footer::footer}"></th:block>
 </body>
 </html>

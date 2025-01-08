@@ -1,3 +1,8 @@
+function showCreateDdayOptionModal() {
+    var modal = document.getElementById("createDdayOptionModal")
+    modal.style.display = "block"
+}
+
 function closeCreateDdayOptionModal() {
     var modal = document.getElementById("createDdayOptionModal")
     modal.style.display = "none"
