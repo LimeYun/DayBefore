@@ -4,14 +4,14 @@ import java.util.List;
 
 public interface BaseService<E> {
 
-    public List<E> list();
+    public List<E> list() throws Exception;
 
-    public E select(Long id);
+    public E select(Long id) throws Exception;
 
-    public int insert(E entity);
+    public int insert(E entity) throws Exception;
 
-    public int update(E entity);
+    public int update(E entity) throws Exception;
 
-    public int delete(Long id);
+    public int delete(Long id) throws Exception;
     
 }

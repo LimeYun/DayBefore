@@ -1,6 +1,7 @@
 package com.hong.daybefore.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.Data;
 
@@ -18,5 +19,8 @@ public class Users {
     private String role;
     private Date createdAt;
     private Date updatedAt;
+
+    private String userAuth;
+    private List<UserAuth> authList;
     
 }

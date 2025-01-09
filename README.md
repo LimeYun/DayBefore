@@ -30,6 +30,7 @@
 - /
 - /join
 ### USER
-- /Dday/list
-- /Dday
+- /user/Dday/list
+- /user/product/list
+- /user/product/product
 ### ADMIN

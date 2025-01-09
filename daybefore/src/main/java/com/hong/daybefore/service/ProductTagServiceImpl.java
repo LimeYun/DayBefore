@@ -15,27 +15,27 @@ public class ProductTagServiceImpl implements ProductTagService {
     private ProductTagMapper productTagMapper;
 
     @Override
-    public List<ProductTag> list() {
+    public List<ProductTag> list() throws Exception {
         return productTagMapper.list();
     }
 
     @Override
-    public ProductTag select(Long id) {
+    public ProductTag select(Long id) throws Exception {
         return productTagMapper.select(id);
     }
 
     @Override
-    public int insert(ProductTag entity) {
+    public int insert(ProductTag entity) throws Exception {
         return productTagMapper.insert(entity);
     }
 
     @Override
-    public int update(ProductTag entity) {
+    public int update(ProductTag entity) throws Exception {
         return productTagMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return productTagMapper.delete(id);
     }
 

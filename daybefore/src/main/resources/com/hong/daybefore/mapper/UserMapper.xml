@@ -8,15 +8,21 @@
     <!-- 목록 -->
     <select id="list" resultType="Users">
         SELECT *
-        FROM users
+        FROM users u JOIN user_auth auth ON u.user_id = auth.user_id
     </select>
 
     <!-- 조회 -->
-    <select id="select" resultType="Users">
+    <select id="selectId" resultType="Users">
         SELECT *
-        FROM users
-        WHERE user_id = #{userId}
+        FROM users u JOIN user_auth auth ON u.user_id = auth.user_id
+        WHERE id = #{id}
     </select>
+
+    <!-- 권한 등록 -->
+    <insert id="insertAuth">
+        INSERT INTO user_auth( user_id, auth)
+        VALUES (#{userId}, #{auth})
+    </insert>
 
     <!-- 등록 -->
     <insert id="insert">

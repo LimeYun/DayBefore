@@ -15,27 +15,27 @@ public class FileServiceImpl implements FileService {
     private FileMapper fileMapper;
 
     @Override
-    public List<Files> list() {
+    public List<Files> list() throws Exception {
         return fileMapper.list();
     }
 
     @Override
-    public Files select(Long id) {
+    public Files select(Long id) throws Exception {
         return fileMapper.select(id);
     }
 
     @Override
-    public int insert(Files entity) {
+    public int insert(Files entity) throws Exception {
         return fileMapper.insert(entity);
     }
 
     @Override
-    public int update(Files entity) {
+    public int update(Files entity) throws Exception {
         return fileMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return fileMapper.delete(id);
     }
 

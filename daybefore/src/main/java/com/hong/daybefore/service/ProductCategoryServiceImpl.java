@@ -15,27 +15,27 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     private ProductCategoryMapper productCategoryMapper;
 
     @Override
-    public List<ProductCategory> list() {
+    public List<ProductCategory> list() throws Exception {
         return productCategoryMapper.list();
     }
 
     @Override
-    public ProductCategory select(Long id) {
+    public ProductCategory select(Long id) throws Exception {
         return productCategoryMapper.select(id);
     }
 
     @Override
-    public int insert(ProductCategory entity) {
+    public int insert(ProductCategory entity) throws Exception {
         return productCategoryMapper.insert(entity);
     }
 
     @Override
-    public int update(ProductCategory entity) {
+    public int update(ProductCategory entity) throws Exception {
         return productCategoryMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return productCategoryMapper.delete(id);
     }
 

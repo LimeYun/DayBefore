@@ -15,27 +15,27 @@ public class TagServiceImpl implements TagService {
     private TagMapper tagMapper;
 
     @Override
-    public List<Tag> list() {
+    public List<Tag> list() throws Exception {
         return tagMapper.list();
     }
 
     @Override
-    public Tag select(Long id) {
+    public Tag select(Long id) throws Exception {
         return tagMapper.select(id);
     }
 
     @Override
-    public int insert(Tag entity) {
+    public int insert(Tag entity) throws Exception {
         return tagMapper.insert(entity);
     }
 
     @Override
-    public int update(Tag entity) {
+    public int update(Tag entity) throws Exception {
         return tagMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return tagMapper.delete(id);
     }
 

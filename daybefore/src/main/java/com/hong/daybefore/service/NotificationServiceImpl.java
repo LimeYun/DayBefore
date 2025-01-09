@@ -15,27 +15,27 @@ public class NotificationServiceImpl implements NotificationService {
     private NotificationMapper notificationMapper;
 
     @Override
-    public List<Notification> list() {
+    public List<Notification> list() throws Exception {
         return notificationMapper.list();
     }
 
     @Override
-    public Notification select(Long id) {
+    public Notification select(Long id) throws Exception {
         return notificationMapper.select(id);
     }
 
     @Override
-    public int insert(Notification entity) {
+    public int insert(Notification entity) throws Exception {
         return notificationMapper.insert(entity);
     }
 
     @Override
-    public int update(Notification entity) {
+    public int update(Notification entity) throws Exception {
         return notificationMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return notificationMapper.delete(id);
     }
 

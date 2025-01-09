@@ -15,27 +15,27 @@ public class RelationshipServiceImpl implements RelationshipService {
     private RelationshipMapper relationshipMapper;
 
     @Override
-    public List<Relationship> list() {
+    public List<Relationship> list() throws Exception {
         return relationshipMapper.list();
     }
 
     @Override
-    public Relationship select(Long id) {
+    public Relationship select(Long id) throws Exception {
         return relationshipMapper.select(id);
     }
 
     @Override
-    public int insert(Relationship entity) {
+    public int insert(Relationship entity) throws Exception {
         return relationshipMapper.insert(entity);
     }
 
     @Override
-    public int update(Relationship entity) {
+    public int update(Relationship entity) throws Exception {
         return relationshipMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return relationshipMapper.delete(id);
     }
 

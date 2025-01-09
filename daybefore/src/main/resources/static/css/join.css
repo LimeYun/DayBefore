@@ -1,5 +1,4 @@
 .join-form {
-    /* background-color: lavender; */
     margin: 150px auto 100px auto;
     width: 550px;
     height: 1050px;
@@ -14,6 +13,7 @@
     justify-content: space-between;
     border-bottom: 1px solid #D5D5D7;
 }
+
 .title-info span {
     font-size: 22px;
     font-weight: bold;
@@ -30,6 +30,19 @@
 input {
     width: 550px;
     height: 38px;
+}
+.id-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.id-input input {
+    width: 450px;
+}
+.id-input button {
+    width: 95px;
+    height: 38px;
+    cursor: pointer;
 }
 .first-line-input {
     display: flex;

@@ -15,27 +15,32 @@ public class DdayServiceImpl implements DdayService {
     private DdayMapper ddayMapper;
 
     @Override
-    public List<Dday> list() {
+    public List<Dday> list() throws Exception {
         return ddayMapper.list();
     }
 
     @Override
-    public Dday select(Long id) {
+    public List<Dday> listByUser() throws Exception {
+        return ddayMapper.listByUser();
+    }
+
+    @Override
+    public Dday select(Long id) throws Exception {
         return ddayMapper.select(id);
     }
 
     @Override
-    public int insert(Dday entity) {
+    public int insert(Dday entity) throws Exception {
         return ddayMapper.insert(entity);
     }
 
     @Override
-    public int update(Dday entity) {
+    public int update(Dday entity) throws Exception {
         return ddayMapper.update(entity);
     }
 
     @Override
-    public int delete(Long id) {
+    public int delete(Long id) throws Exception {
         return ddayMapper.delete(id);
     }
 

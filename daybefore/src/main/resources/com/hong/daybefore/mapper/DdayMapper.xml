@@ -11,10 +11,17 @@
         FROM Dday
     </select>
 
+    <!-- 유저별 목록 -->
+    <select id="listByUser" resultType="Dday">
+        SELECT *
+        FROM Dday d 
+        JOIN users u ON d.user_id = u.user_id
+    </select>
+
     <!-- 조회 -->
     <select id="select" resultType="Dday">
         SELECT *
-        FROM Dday
+        FROM Dday 
         WHERE day_id = #{dayId}
     </select>
 
