@@ -1,7 +1,7 @@
 const csrfToken = "[[${_csrf.token}]]"
 
 // 아이디 중복확인
-function checkId() {
+async function checkId() {
     const id = document.getElementById("id").value;
 
     if (!id) {
@@ -9,15 +9,23 @@ function checkId() {
         return;
     }
 
+      // 아이디 유효성 검사
+      const idRegex = /^[a-zA-Z0-9]{6,16}$/;
+  
+      if (!idRegex.test(id)) {
+          alert("아이디는 영문과 숫자만, 6~16자로 입력해주세요.");
+          return false;
+      }
+
     try {
-        const response = fetch(`/check/${id}`, {
+        const response = await fetch(`/check/${id}`, {
             method: 'GET',
             headers: {
                 'X-CSRF-TOKEN': csrfToken
             }
         })
         if (response.ok) {
-            const result = response.text()
+            const result = await response.text()
             if (result == 'true') {
                 alert('사용 가능한 아이디 입니다.')
                 return true;
@@ -65,32 +73,42 @@ function checkSubmit(event) {
     document.getElementById('email').value = email;
     document.getElementById('birth').value = birth;
 
-    // 아이디 중복 확인
-    const isIdAvailable = checkId();
-    if (!isIdAvailable) {
-        return;
-    }
+    // // 아이디 중복 확인
+    // const isIdAvailable = checkId();
+    // if (!isIdAvailable) {
+    //     return;
+    // }
 
-    // 아이디 유효성 검사
-    const id = document.getElementById("id").value;
-    const idConfirm = /^[a-zA-Z0-9]{6,16}$/;
+    // 비밀번호 유효성 검사
+    const password = document.getElementById('password').value;
 
-    if (!idConfirm.test(id)) {
-        alert("아이디는 영문과 숫자만, 6~16자로 입력해주세요.");
+    const passwordLength = /^.{8,16}$/
+    const passwordNumber = /[0-9]/
+    const passwordSpecial = /[W_]/
+    const passwordEnglish = /[a-zA-Z]/
+
+    const hasNumber = passwordNumber.test(password)
+    const hasSpecial = passwordSpecial.test(password)
+    const hasEnglish = passwordEnglish.test(password)
+
+    if (!passwordLength.test(password)) {
+        alert("비밀번호는 8자 이상 16자 이하이어야 합니다.");
         return false;
     }
-    else {
-        alert("사용 가능한 아이디 입니다.");
-        return true;
+
+    const passwordRegex = (hasNumber && hasSpecial) || (hasSpecial && hasEnglish) || (hasNumber && hasEnglish)
+
+    if (!passwordRegex) {
+        alert("비밀번호는 영문, 숫자, 특수문자 중 2가지 이상 조합이어야 합니다.")
+        return false;
     }
 
-    // 비밀번호 확인
-    const password = document.getElementById('password').value;
+    // 비밀번호 중복 확인
     const passwordCheck = document.getElementById('passwordCheck').value;
     if (password !== passwordCheck) {
         alert('비밀번호가 일치하지 않습니다.');
         return;
     }
 
-
+    document.getElementById("form").submit();
 }

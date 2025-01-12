@@ -21,6 +21,9 @@
                 <button type="button" class="login" onclick="showLoginModal()">로그인</button>
                 <a href="/join">회원가입</a>
             </div>
+            <div class="logout" th:if="${user != null}">
+                <button type="submit" class="logout">로그아웃</button>
+            </div>
         </div>
 
         <div id="loginModal">
@@ -37,10 +40,20 @@
                             <input type="text" placeholder="ID">
                         </div>
                         <div class="pw">
-                            <input type="text" placeholder="PASSWORD">
+                            <input type="password" placeholder="PASSWORD">
                         </div>
                     </div>
-                    <button type="button" class="login-request">로그인</button>
+                    <div class="check-remember">
+                        <div class="remember-id">
+                            <input type="checkbox" name="remember-id" th:checke="${rememberId}">
+                            <span>아이디 저장</span>
+                        </div>
+                        <div class="remember-me">
+                            <input type="checkbox" name="remember-me">
+                            <span>자동 로그인</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="login-request">로그인</button>
                     <div class="search">
                         <div class="search-id">
                             <a href="/">아이디찾기</a>

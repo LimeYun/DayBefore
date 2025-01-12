@@ -5,27 +5,48 @@
 
 <mapper namespace="com.hong.daybefore.mapper.UserMapper">
 
+    <resultMap id="UserMap" type="Users">
+        <id property="userId" column="user_id"/>
+        <result property="id" column="id"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email" />
+        <result property="phone" column="phone"/>
+        <result property="birth" column="birth"/>
+        <result property="address" column="address"/>
+        <result property="createdAt" column="created_at" />
+        <result property="updatedAt" column="updated_at" />
+
+        <collection property="authList" select="selectAuthList" column="user_id" javaType="list" ofType="com.hong.daybefore.domain.UserAuth"></collection>
+    </resultMap>
+
     <!-- 목록 -->
-    <select id="list" resultType="Users">
+    <select id="list" resultMap="UserMap">
         SELECT *
         FROM users u JOIN user_auth auth ON u.user_id = auth.user_id
     </select>
 
     <!-- 조회 -->
-    <select id="selectId" resultType="Users">
+    <select id="selectId" resultMap="UserMap">
         SELECT *
         FROM users u JOIN user_auth auth ON u.user_id = auth.user_id
-        WHERE id = #{id}
+        WHERE u.id = #{id}
     </select>
 
     <!-- 권한 등록 -->
     <insert id="insertAuth">
-        INSERT INTO user_auth( user_id, auth)
+        INSERT INTO user_auth (user_id, auth)
         VALUES (#{userId}, #{auth})
     </insert>
 
+    <select id="selectAuthList" resultType="UserAuth">
+        SELECT *
+        FROM user_auth
+        WHERE user_id = #{userId}
+    </select>
+
     <!-- 등록 -->
-    <insert id="insert">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="userId">
         INSERT INTO users (id, password, name, email, phone, birth, address)
         VALUES (#{id}, #{password}, #{name}, #{email}, #{phone}, #{birth}, #{address})
     </insert>

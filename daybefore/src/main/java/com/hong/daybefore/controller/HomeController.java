@@ -1,8 +1,11 @@
 package com.hong.daybefore.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +16,8 @@ import com.hong.daybefore.domain.Users;
 import com.hong.daybefore.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -71,6 +76,23 @@ public class HomeController {
         
         return "redirect:/join?error";
     }
+
+    /**
+     * 아이디 중복확인
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    @GetMapping("/check/{id}")
+    public ResponseEntity<Boolean> idCheck(@PathVariable("id") String id) throws Exception {
+        Users user = userService.selectId(id);
+
+        if (user != null) {
+            return new ResponseEntity<>(false, HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(true, HttpStatus.OK);
+    }
+    
     
     
 
